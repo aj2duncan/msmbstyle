@@ -38,13 +38,13 @@ body {
   font-size: 1.4rem;
   font-weight: bold;
   margin-top: 1.2rem;
-  color: green;
+  color: #572163;
 }
 
 .solution, .solution-begin, .solution-end {
   font-size: 1.4rem;
   font-weight: bold;
-  color: red;
+  color: #572163;
 }
 
 /* we can remove this eventually 
@@ -350,6 +350,12 @@ pre > code {
 .build-date {
   font-size: 0.8em;
   float: left;
+}
+
+/* fixing lists */
+
+ol, ul {
+  width: 87.5%;
 }
 
 
