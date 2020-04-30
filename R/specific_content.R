@@ -150,10 +150,11 @@ solution_end <- function() {
 #'   \code{label = 'ques:one'} use \code{\@ref(ques:one)} in the main text.
 #' 
 #' @examples 
+#' \dontrun{
 #' msmbstyle::question(text = "This is a labelled question",
 #'                     label = "ques:two", 
 #'                     header = "Answer")
-#' 
+#' }
 #' @seealso \code{\link{solution}}
 #' 
 #' @export

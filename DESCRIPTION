@@ -18,6 +18,8 @@ Imports:
     knitr (>= 1.18),
     rmarkdown,
     stringr,
-    magrittr
-RoxygenNote: 6.1.0
+    magrittr,
+    xml2,
+    markdown
+RoxygenNote: 7.1.0
 Encoding: UTF-8

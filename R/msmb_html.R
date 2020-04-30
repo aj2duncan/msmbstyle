@@ -1,5 +1,6 @@
 #' @rdname msmb_html
 #' @importFrom bookdown html_chapters
+#' @param ... Additional arguments to be passed to \code{bookdown::html_chapters()}
 #' @export
 msmb_html_book = function(...) {
     html_chapters(..., 
@@ -132,7 +133,11 @@ msmb_html = function(
             ) %>%
             stringr::str_replace("<br><span class=\"author hidden-xs\">",
                                  "<span class=\"author hidden-xs\">") %>%
-            stringr::str_remove("\\(PART\\*?\\)")
+            stringr::str_remove("\\(PART\\*?\\)") %>%
+            # add highlighted code using same syntax as xaringan
+            stringr::str_replace('^(.+?)<span class=\"co\">#&lt;&lt;</span>(.+?)$', 
+                                 '<div class = "highlighted-code">\\1\\2</div>')
+
         
         xfun::write_utf8(x, output)
         output
@@ -198,6 +203,8 @@ msmb_html = function(
                                                                           '```\n</div>')
         }
         res
+        
+        
     }
     
     ## engine for placing arbitrary content in the margin
@@ -636,6 +643,9 @@ msmb_build_chapter = function(
     return(x)
 }
 
+
+#' Function to add style to margin note
+#' @param text Text of margin note
 #' @export
 margin_note <- function(text) {
     
@@ -645,6 +655,8 @@ margin_note <- function(text) {
            '</div></div>')
     
 }
+
+
 
 ## for main body tables, we place the caption in the margin.
 ## for tables with class='margintab' we put both the table

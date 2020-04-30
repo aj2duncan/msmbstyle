@@ -320,6 +320,12 @@ code.r {
     white-space: pre;
 }
 
+.highlighted-code {
+  background-color: #cf95dc; 
+  min-height: 1em;
+  display: block;
+  margin-bottom: -20px;
+}
 
 div.sourceCode {
     width: auto;
@@ -331,7 +337,7 @@ pre.sourceCode {
 
 pre {
     width: auto; 
-}    
+}
 
 pre > code {
     white-space: pre;
@@ -455,3 +461,4 @@ ol, ul {
     background-color: #89349c;
   }
 }
+
