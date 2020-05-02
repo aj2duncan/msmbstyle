@@ -1,5 +1,10 @@
 # **msmbstyle**
 
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.com/aj2duncan/msmbstyle.svg?branch=master)](https://travis-ci.com/aj2duncan/msmbstyle)
+<!-- badges: end -->
+
+
 ## Grid layout branch
 
 This branch is for exploring using Bootstrap to provide the layout, so I can more easily resise navigation and margins as the size of the screen changes.  
