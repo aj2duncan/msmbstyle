@@ -288,7 +288,13 @@ li.toc {
 /* formatting tables */
 
 table {
-    width: 100%;
+ /*  centring table */
+ width: 87.5%;
+ margin-left: auto;
+ margin-right: auto;
+ padding-left: 12.5%;
+ /* Same font size as the rest of the text */
+ font-size: 1.4rem;
 }
 
 .console {
