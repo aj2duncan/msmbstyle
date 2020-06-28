@@ -27,16 +27,17 @@ Documentation can be found at [https://aj2duncan.github.io/msmbstyle](https://aj
 
 ## Funding 
 
-### Original Project
-
-Funding for development of the original package and the surrounding efforts directed towards the creation of the online version of Modern Statistics for Modern Biology was provided by the German Network for Bioinformatics Infrastructure
-
-<a href="http://www.denbi.de"><img src="https://tess.elixir-europe.org/system/content_providers/images/000/000/063/original/deNBI_Logo_rgb.jpg" width="400" align="left"></a><br><br><br>
-
-### Updates
+### Updated Project
 
 The updates of the package were funded through ESIF.
 
 ![](images/small-UHI_Logo.png)
 ![](images/small-ESF_logo2.png)
 ![](images/small-SFC_colour_logo.png)
+
+### Original Project
+
+Funding for development of the original package and the surrounding efforts directed towards the creation of the online version of Modern Statistics for Modern Biology was provided by the German Network for Bioinformatics Infrastructure
+
+<a href="http://www.denbi.de"><img src="https://tess.elixir-europe.org/system/content_providers/images/000/000/063/original/deNBI_Logo_rgb.jpg" width="400" align="left"></a>
+
