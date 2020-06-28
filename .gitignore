@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+
+R/prep_documentation.R

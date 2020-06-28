@@ -23,7 +23,7 @@ remotes::install_github("aj2duncan/msmbstyle")
 
 ## Usage
 
-Documentation can be found at [https://github.com/aj2duncan/msmbstyle](https://github.com/aj2duncan/msmbstyle).
+Documentation can be found at [https://aj2duncan.github.io/msmbstyle](https://aj2duncan.github.io/msmbstyle).
 
 ## Funding 
 
