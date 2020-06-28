@@ -1,7 +1,7 @@
 ---
 title: "MSMB Style"
 subtitle: "R bookdown example"
-author: "Mike Smith"
+author: "Mike Smith & Andrew Duncan"
 date: "`r Sys.Date()`"
 output:
   msmbstyle::msmb_html_book:

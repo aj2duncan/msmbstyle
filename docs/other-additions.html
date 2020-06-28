@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="pandoc">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="References | MSMB HTML Book Style">
+<meta property="og:title" content="4 Other Additions | MSMB HTML Book Style">
 <meta property="og:type" content="book">
 <meta name="author" content="Mike Smith &amp; Andrew Duncan">
 <meta name="date" content="2020-06-28">
@@ -13,8 +13,8 @@
 MathJax.Hub.Config({
   TeX: { equationNumbers: { autoNumber: "AMS" } }
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script><meta name="description" content="References | MSMB HTML Book Style">
-<title>References | MSMB HTML Book Style</title>
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script><meta name="description" content="4 Other Additions | MSMB HTML Book Style">
+<title>4 Other Additions | MSMB HTML Book Style</title>
 <script src="libs/jquery/jquery.min.js"></script><link href="libs/tufte-css/tufte.css" rel="stylesheet">
 <link href="libs/BootSideMenu/BootSideMenu.css" rel="stylesheet">
 <script>
@@ -179,22 +179,78 @@ MSMB HTML Book Style
 <div class="container chapter-content">
 <div class="row">
 <div class="hidden-xs hidden-sm col-md-2">
+<div class="panel panel-default toc-section">
+<div class="panel-heading">Chapter Navigation</div>
+<div class="section-link list-group">
+<a class="list-group-item" href="#code-highlighting">4.1 Code Highlighting</a>
+<a class="list-group-item" href="#rstudio-project-template">4.2 RStudio Project Template</a>
+<a class="list-group-item" href="#css-changes">4.3 CSS Changes</a>
+</div>
+</div>
 </div>
 <div class="hidden-xs hidden-md hidden-lg">
 <div id="mySidenav">
+<div class="panel panel-default toc-section-slide">
+<div class="panel-heading">Chapter Navigation</div>
+<div class="section-link list-group">
+<a class="list-group-item" href="#code-highlighting">4.1 Code Highlighting</a>
+<a class="list-group-item" href="#rstudio-project-template">4.2 RStudio Project Template</a>
+<a class="list-group-item" href="#css-changes">4.3 CSS Changes</a>
+</div>
+</div>
 </div>
 </div>
 <script>$("#mySidenav").BootSideMenu({pushBody:false, width:"25%", autoClose:true});</script>
 <div class="col-xs-12 col-md-10">
-<div id="references" class="section level1 unnumbered">
-<div class="row"><div class="col-sm-9"><h1>References</h1></div></div>
-
-<div id="refs" class="references">
-<div id="ref-MSMB">
-<div class="row"><div class="col-sm-9"><p>Holmes, Susan, and Wolfgang Huber. 2018. <em>Modern Statistics for Modern Biology</em>.</p></div></div>
+<div id="other-additions" class="section level1">
+<div class="row"><div class="col-sm-9">
+<h1><span class="header-section-number">4</span> Other Additions</h1>
+</div></div>
+<div class="row"><div class="col-sm-9"><p>Since forking the original project there have been some small additions.</p></div></div>
+<div id="code-highlighting" class="section level2">
+<div class="row"><div class="col-sm-9"><h2>
+<span class="header-section-number">4.1</span> Code Highlighting</h2></div></div>
+<div class="row"><div class="col-sm-9"><p>As the intension with this package is to produce a HTML book, some of the code highlighting syntax from <a href="https://slides.yihui.org/xaringan/#31" target="_blank">xaringan</a> by ending a line with a comment <code>#&lt;&lt;</code>. For example a code chunk like this:</p></div></div>
+<div class="row"><div class="col-sm-9"><div class="sourceCode" id="cb16"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb16-1"><a href="other-additions.html#cb16-1"></a>library(ggplot2)</span>
+<span id="cb16-2"><a href="other-additions.html#cb16-2"></a>ggplot(economics, aes(x = date, y = unemploy)) + </span>
+<span id="cb16-3"><a href="other-additions.html#cb16-3"></a>  geom_line() +                                   #&lt;&lt;</span>
+<span id="cb16-4"><a href="other-additions.html#cb16-4"></a>  labs(y = "Unemployment")</span></code></pre></div></div></div>
+<div class="row"><div class="col-sm-9"><p>will be rendered as</p></div></div>
+<div class="row test">
+<div class="col-sm-9">
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="other-additions.html#cb17-1"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb17-2"><a href="other-additions.html#cb17-2"></a><span class="kw">ggplot</span>(economics, <span class="kw">aes</span>(<span class="dt">x =</span> date, <span class="dt">y =</span> unemploy)) <span class="op">+</span><span class="st"> </span></span>
+<div class = "highlighted-code"><span id="cb17-3"><a href="other-additions.html#cb17-3"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span><span class="st">                                  </span></span></div>
+<span id="cb17-4"><a href="other-additions.html#cb17-4"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">y =</span> <span class="st">"Unemployment"</span>)</span></code></pre></div>
 </div>
-<div id="ref-R-tufte">
-<div class="row"><div class="col-sm-9"><p>Xie, Yihui, and JJ Allaire. 2018. <em>Tufte: Tufte’s Styles for R Markdown Documents</em>. <a href="https://CRAN.R-project.org/package=tufte">https://CRAN.R-project.org/package=tufte</a>.</p></div></div>
+<img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672">
+</div>
+</div>
+<div id="rstudio-project-template" class="section level2">
+<div class="row"><div class="col-sm-9"><h2>
+<span class="header-section-number">4.2</span> RStudio Project Template</h2></div></div>
+<div class="row"><div class="col-sm-9"><p>It is now possible to open an RStudio project with these files as a template. <code>RStudio -&gt; New Project -&gt; From Template -&gt; Bookdown Project using msmbstyle grid layout</code>.</p></div></div>
+</div>
+<div id="css-changes" class="section level2">
+<div class="row"><div class="col-sm-9"><h2>
+<span class="header-section-number">4.3</span> CSS Changes</h2></div></div>
+<div class="row"><div class="col-sm-9"><p>Aside from adding code highlighting, the following css has been altered from the original.</p></div></div>
+<ul>
+<li>Added spacing to headers to improve page position when using the side menu</li>
+<li>Altered css for tables</li>
+<li>Changed navbar and header css to match preferred colours</li>
+</ul>
+<div id="changing-code-highlighted" class="section level3">
+<div class="row"><div class="col-sm-9"><h3>
+<span class="header-section-number">4.3.1</span> Changing Code Highlighted</h3></div></div>
+<div class="row"><div class="col-sm-9"><p>The css for the highlighted code is defined by:</p></div></div>
+<div class="row"><div class="col-sm-9"><div class="sourceCode" id="cb18"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb18-1"><a href="other-additions.html#cb18-1"></a><span class="fu">.highlighted-code</span> {</span>
+<span id="cb18-2"><a href="other-additions.html#cb18-2"></a>  <span class="kw">background-color</span>: <span class="cn">#cf95dc</span><span class="op">;</span> </span>
+<span id="cb18-3"><a href="other-additions.html#cb18-3"></a>  <span class="kw">min-height</span>: <span class="dv">1</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb18-4"><a href="other-additions.html#cb18-4"></a>  <span class="kw">display</span>: <span class="dv">block</span><span class="op">;</span></span>
+<span id="cb18-5"><a href="other-additions.html#cb18-5"></a>  <span class="kw">margin-bottom</span>: <span class="dv">-20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb18-6"><a href="other-additions.html#cb18-6"></a>}</span></code></pre></div></div></div>
+
 </div>
 </div>
 </div>
@@ -203,7 +259,8 @@ MSMB HTML Book Style
 <div class="row">
 <div class="col-xs-12">
 <p style="text-align: center;">
-<a href="other-additions.html"><button class="btn btn-default">Previous</button></a>
+<a href="figures-and-margin-content.html"><button class="btn btn-default">Previous</button></a>
+<a href="references.html"><button class="btn btn-default">Next</button></a>
 </p>
 <p class="build-date">Page built: 
 2020-06-28

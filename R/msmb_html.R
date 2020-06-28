@@ -131,8 +131,8 @@ msmb_html = function(
                                      str_replace(x, "<div class=\"col-sm-9\">",
                                                  "<div class=\"col-sm-9\"><h1>")}
             ) %>%
-            stringr::str_replace("<br><span class=\"author hidden-xs\">",
-                                 "<span class=\"author hidden-xs\">") %>%
+#            stringr::str_replace("<br><span class=\"author hidden-xs\">",
+#                                 "<span class=\"author hidden-xs\">") %>%
             stringr::str_remove("\\(PART\\*?\\)") %>%
             # add highlighted code using same syntax as xaringan
             stringr::str_replace('^(.+?)<span class=\"co\">#&lt;&lt;</span>(.+?)$', 

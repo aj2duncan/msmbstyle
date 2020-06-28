@@ -1,9 +1,10 @@
 Package: msmbstyle
 Type: Package
 Title: MSMB Styles for R Markdown Documents
-Version: 0.0.5
+Version: 0.1.0
 Authors@R: c(
-    person("Mike", "Smith", role = c("aut", "cre"), email = "grimbough@gmail.com")
+    person("Mike", "Smith", role = c("aut", "cre"), email = "grimbough@gmail.com"),
+    person("Andrew", "Duncan", role = c("aut", "main"), email = "andrew.duncan.ic@uhi.ac.uk")
     )
 Description: Provides R Markdown output formats to use with Modern Statistics 
     for Modern Biology.

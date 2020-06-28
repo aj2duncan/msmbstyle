@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="2 Questions and Solutions | MSMB HTML Book Style">
 <meta property="og:type" content="book">
-<meta property="og:image" content="images/ex-cover-small.jpg">
-<meta name="author" content="Mike Smith">
-<meta name="date" content="2020-05-02">
+<meta name="author" content="Mike Smith &amp; Andrew Duncan">
+<meta name="date" content="2020-06-28">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
   TeX: { equationNumbers: { autoNumber: "AMS" } }
@@ -60,9 +59,9 @@ window.onscroll = function() {
 <script src="libs/BootSideMenu/BootSideMenu.js"></script><link href="libs/msmb-css/msmb.css" rel="stylesheet">
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -72,14 +71,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -88,9 +89,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  { background-color: #f8f8f8; }
+  {  background-color: #f8f8f8; }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
@@ -144,7 +145,7 @@ MSMB HTML Book Style
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav hidden-xs">
-<!-- title and authors --><span class="title hidden-xs">MSMB HTML Book Style</span><span class="author hidden-xs">Mike Smith</span>
+<!-- title and authors --><span class="title hidden-xs">MSMB HTML Book Style</span><br><span class="author hidden-xs">Mike Smith &amp; Andrew Duncan</span>
 </ul>
 <ul class="nav navbar-nav navbar-right">
 <li class="dropdown">
@@ -154,6 +155,7 @@ MSMB HTML Book Style
 <li><a href="tables.html"><span class="toc-section-number">1</span> Tables</a></li>
 <li><a href="questions-and-solutions.html"><span class="toc-section-number">2</span> Questions and Solutions</a></li>
 <li><a href="figures-and-margin-content.html"><span class="toc-section-number">3</span> Figures and Margin Content</a></li>
+<li><a href="other-additions.html"><span class="toc-section-number">4</span> Other Additions</a></li>
 <li><a href="references.html">References</a></li>
 </ul>
 </li>
@@ -164,6 +166,7 @@ MSMB HTML Book Style
 </div>
 <!-- /.container-fluid -->
         
+
 
 
 
@@ -218,7 +221,7 @@ MSMB HTML Book Style
 
 <div class="row test">
 <div class="col-sm-9">
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">msmbstyle<span class="op">::</span><span class="kw">question</span>(<span class="dt">text =</span> <span class="st">"Is this question displaying correctly?"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="questions-and-solutions.html#cb4-1"></a>msmbstyle<span class="op">::</span><span class="kw">question</span>(<span class="dt">text =</span> <span class="st">"Is this question displaying correctly?"</span>)</span></code></pre></div>
 </div>
 </div>
 <div class="ques-sol">
@@ -286,7 +289,7 @@ Does this question include <code>x</code> and <code>y</code>?
 <div class="row"><div class="col-sm-9"><p>This is a more complex question. It involves both this text, some code, and the plot produced by that code.</p></div></div>
 <div class="row test">
 <div class="col-sm-9">
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">plot</span>( <span class="dv">1</span><span class="op">:</span><span class="dv">10</span> )</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="questions-and-solutions.html#cb5-1"></a><span class="kw">plot</span>( <span class="dv">1</span><span class="op">:</span><span class="dv">10</span> )</span></code></pre></div>
 </div>
 <div class="col-sm-9">
 <p><img src="_main_files/figure-html/longer-question-1.png" alt="An informative correlation" width="672"></p>
@@ -311,8 +314,8 @@ An informative correlation
 <span class="header-section-number">2.2.1</span> Simple solution</h3></div></div>
 <div class="row"><div class="col-sm-9"><p>Again, if your solution is just a single a paragraph of text, you can use <code>msmbstyle::solution()</code> and provide the paragraph via the argument <code>text</code>. We see an example of this approach below:</p></div></div>
 <div class="ques-sol">
-<div class="row"><div class="col-sm-9"><span class="solution-begin">► Solution<span id="sol-start-1" class="fa fa-plus-square solution-icon clickable" onclick="toggle_visibility('sol-body-1', 'sol-start-1')"></span></span></div></div>
-<div id="sol-body-1" class="solution-body" style="display: none;">
+<div class="row"><div class="col-sm-9"><span class="solution-begin">► Solution<span id="sol-start-16" class="fa fa-plus-square solution-icon clickable" onclick="toggle_visibility('sol-body-16', 'sol-start-16')"></span></span></div></div>
+<div id="sol-body-16" class="solution-body" style="display: none;">
 <div class="row"><div class="col-sm-9"><p>
 This is a single paragraph providing an answer.
 </p></div></div>
@@ -323,9 +326,9 @@ This is a single paragraph providing an answer.
 <div class="row"><div class="col-sm-9"><p>Below is an example where the collapsing behaviour has been turned off and the section header renamed.</p></div></div>
 <div class="row test">
 <div class="col-sm-9">
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">msmbstyle<span class="op">::</span><span class="kw">solution</span>(<span class="dt">text =</span> <span class="st">"This an 'Answer' and cannot be hidden"</span>,</a>
-<a class="sourceLine" id="cb6-2" title="2">                    <span class="dt">header =</span> <span class="st">"Answer"</span>,</a>
-<a class="sourceLine" id="cb6-3" title="3">                    <span class="dt">toggle =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="questions-and-solutions.html#cb6-1"></a>msmbstyle<span class="op">::</span><span class="kw">solution</span>(<span class="dt">text =</span> <span class="st">"This an 'Answer' and cannot be hidden"</span>,</span>
+<span id="cb6-2"><a href="questions-and-solutions.html#cb6-2"></a>                    <span class="dt">header =</span> <span class="st">"Answer"</span>,</span>
+<span id="cb6-3"><a href="questions-and-solutions.html#cb6-3"></a>                    <span class="dt">toggle =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
 </div>
 </div>
 <div class="ques-sol">
@@ -343,24 +346,30 @@ This an ‘Answer’ and cannot be hidden
 <span class="header-section-number">2.2.2</span> More complex solutions</h3></div></div>
 <div class="row"><div class="col-sm-9"><p>More comprehensive solutions can similarly be indicated with calls to <code>solution_begin()</code> and <code>solution_end()</code>. The first of these takes the same arguments as <code>solution()</code> allowing you to set the visibility toggle and section heading text.</p></div></div>
 <div class="ques-sol">
-<div class="row"><div class="col-sm-9"><span class="solution-begin">► Solution<span id="sol-start-3" class="fa fa-plus-square solution-icon clickable" onclick="toggle_visibility('sol-body-3', 'sol-start-3')"></span></span></div></div>
-<div id="sol-body-3" class="solution-body" style="display: none;">
+<div class="row"><div class="col-sm-9"><span class="solution-begin">► Solution<span id="sol-start-18" class="fa fa-plus-square solution-icon clickable" onclick="toggle_visibility('sol-body-18', 'sol-start-18')"></span></span></div></div>
+<div id="sol-body-18" class="solution-body" style="display: none;">
 <div class="row"><div class="col-sm-9"><p>This is a more complex solution. We’ll reuse some plotting code from the <strong>tufte</strong> vignette to include a figure in the margin.</p></div></div>
 <div class="row test">
+<div class="col-sm-9 col-sm-pull-3">
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="questions-and-solutions.html#cb7-1"></a><span class="kw">library</span>(ggplot2)</span></code></pre></div>
+</div>
+<div class="col-sm-9 col-sm-pull-3">
+<pre><code>## Want to understand how all the pieces fit together?
+## Read R for Data Science: https://r4ds.had.co.nz/</code></pre>
+</div>
 <div class="col-sm-3 col-sm-push-9">
 <img src="_main_files/figure-html/fig-margin2-1.png" alt="MPG vs horsepower, colored by transmission." width="336"><div class="caption">
 MPG vs horsepower, colored by transmission.
 </div>
 </div>
 <div class="col-sm-9 col-sm-pull-3">
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb7-2" title="2">mtcars2 &lt;-<span class="st"> </span>mtcars</a>
-<a class="sourceLine" id="cb7-3" title="3">mtcars2<span class="op">$</span>am &lt;-<span class="st"> </span><span class="kw">factor</span>(</a>
-<a class="sourceLine" id="cb7-4" title="4">  mtcars<span class="op">$</span>am, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">'automatic'</span>, <span class="st">'manual'</span>)</a>
-<a class="sourceLine" id="cb7-5" title="5">)</a>
-<a class="sourceLine" id="cb7-6" title="6"><span class="kw">ggplot</span>(mtcars2, <span class="kw">aes</span>(hp, mpg, <span class="dt">color =</span> am)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-7" title="7"><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb7-8" title="8"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">'bottom'</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="questions-and-solutions.html#cb9-1"></a>mtcars2 &lt;-<span class="st"> </span>mtcars</span>
+<span id="cb9-2"><a href="questions-and-solutions.html#cb9-2"></a>mtcars2<span class="op">$</span>am &lt;-<span class="st"> </span><span class="kw">factor</span>(</span>
+<span id="cb9-3"><a href="questions-and-solutions.html#cb9-3"></a>  mtcars<span class="op">$</span>am, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">'automatic'</span>, <span class="st">'manual'</span>)</span>
+<span id="cb9-4"><a href="questions-and-solutions.html#cb9-4"></a>)</span>
+<span id="cb9-5"><a href="questions-and-solutions.html#cb9-5"></a><span class="kw">ggplot</span>(mtcars2, <span class="kw">aes</span>(hp, mpg, <span class="dt">color =</span> am)) <span class="op">+</span></span>
+<span id="cb9-6"><a href="questions-and-solutions.html#cb9-6"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>() <span class="op">+</span></span>
+<span id="cb9-7"><a href="questions-and-solutions.html#cb9-7"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">'bottom'</span>)</span></code></pre></div>
 </div>
 <div class="col-sm-9 col-sm-pull-3">
 <pre><code>## `geom_smooth()` using method = 'loess' and formula 'y ~ x'</code></pre>
@@ -383,7 +392,7 @@ MPG vs horsepower, colored by transmission.
 <a href="figures-and-margin-content.html"><button class="btn btn-default">Next</button></a>
 </p>
 <p class="build-date">Page built: 
-2020-05-02
+2020-06-28
 </p>
 </div>
 </div>

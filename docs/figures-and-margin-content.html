@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="3 Figures and Margin Content | MSMB HTML Book Style">
 <meta property="og:type" content="book">
-<meta property="og:image" content="images/ex-cover-small.jpg">
-<meta name="author" content="Mike Smith">
-<meta name="date" content="2020-05-02">
+<meta name="author" content="Mike Smith &amp; Andrew Duncan">
+<meta name="date" content="2020-06-28">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
   TeX: { equationNumbers: { autoNumber: "AMS" } }
@@ -60,9 +59,9 @@ window.onscroll = function() {
 <script src="libs/BootSideMenu/BootSideMenu.js"></script><link href="libs/msmb-css/msmb.css" rel="stylesheet">
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -72,14 +71,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -88,9 +89,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  { background-color: #f8f8f8; }
+  {  background-color: #f8f8f8; }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
@@ -144,7 +145,7 @@ MSMB HTML Book Style
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav hidden-xs">
-<!-- title and authors --><span class="title hidden-xs">MSMB HTML Book Style</span><span class="author hidden-xs">Mike Smith</span>
+<!-- title and authors --><span class="title hidden-xs">MSMB HTML Book Style</span><br><span class="author hidden-xs">Mike Smith &amp; Andrew Duncan</span>
 </ul>
 <ul class="nav navbar-nav navbar-right">
 <li class="dropdown">
@@ -154,6 +155,7 @@ MSMB HTML Book Style
 <li><a href="tables.html"><span class="toc-section-number">1</span> Tables</a></li>
 <li><a href="questions-and-solutions.html"><span class="toc-section-number">2</span> Questions and Solutions</a></li>
 <li><a href="figures-and-margin-content.html"><span class="toc-section-number">3</span> Figures and Margin Content</a></li>
+<li><a href="other-additions.html"><span class="toc-section-number">4</span> Other Additions</a></li>
 <li><a href="references.html">References</a></li>
 </ul>
 </li>
@@ -164,6 +166,7 @@ MSMB HTML Book Style
 </div>
 <!-- /.container-fluid -->
         
+
 
 
 
@@ -220,14 +223,14 @@ MPG vs horsepower, colored by transmission.
 </div>
 </div>
 <div class="col-sm-9 col-sm-pull-3">
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">library</span>(ggplot2)</a>
-<a class="sourceLine" id="cb9-2" title="2">mtcars2 &lt;-<span class="st"> </span>mtcars</a>
-<a class="sourceLine" id="cb9-3" title="3">mtcars2<span class="op">$</span>am &lt;-<span class="st"> </span><span class="kw">factor</span>(</a>
-<a class="sourceLine" id="cb9-4" title="4">  mtcars<span class="op">$</span>am, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">'automatic'</span>, <span class="st">'manual'</span>)</a>
-<a class="sourceLine" id="cb9-5" title="5">)</a>
-<a class="sourceLine" id="cb9-6" title="6"><span class="kw">ggplot</span>(mtcars2, <span class="kw">aes</span>(hp, mpg, <span class="dt">color =</span> am)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb9-7" title="7"><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb9-8" title="8"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">'bottom'</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="figures-and-margin-content.html#cb11-1"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb11-2"><a href="figures-and-margin-content.html#cb11-2"></a>mtcars2 &lt;-<span class="st"> </span>mtcars</span>
+<span id="cb11-3"><a href="figures-and-margin-content.html#cb11-3"></a>mtcars2<span class="op">$</span>am &lt;-<span class="st"> </span><span class="kw">factor</span>(</span>
+<span id="cb11-4"><a href="figures-and-margin-content.html#cb11-4"></a>  mtcars<span class="op">$</span>am, <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">'automatic'</span>, <span class="st">'manual'</span>)</span>
+<span id="cb11-5"><a href="figures-and-margin-content.html#cb11-5"></a>)</span>
+<span id="cb11-6"><a href="figures-and-margin-content.html#cb11-6"></a><span class="kw">ggplot</span>(mtcars2, <span class="kw">aes</span>(hp, mpg, <span class="dt">color =</span> am)) <span class="op">+</span></span>
+<span id="cb11-7"><a href="figures-and-margin-content.html#cb11-7"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>() <span class="op">+</span></span>
+<span id="cb11-8"><a href="figures-and-margin-content.html#cb11-8"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">'bottom'</span>)</span></code></pre></div>
 </div>
 <div class="col-sm-9 col-sm-pull-3">
 <pre><code>## `geom_smooth()` using method = 'loess' and formula 'y ~ x'</code></pre>
@@ -265,8 +268,8 @@ We know from <em>the first fundamental theorem of calculus</em> that for <span c
 <div class="row"><div class="col-sm-9"><p>You can arrange for figures to span across the entire page by using the chunk option <code>fig.fullwidth = TRUE</code>.</p></div></div>
 <div class="row test">
 <div class="col-sm-9">
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">ggplot</span>(diamonds, <span class="kw">aes</span>(carat, price)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb11-2" title="2"><span class="st">  </span><span class="kw">facet_grid</span>(<span class="op">~</span><span class="st"> </span>cut)</a></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="figures-and-margin-content.html#cb13-1"></a><span class="kw">ggplot</span>(diamonds, <span class="kw">aes</span>(carat, price)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>() <span class="op">+</span></span>
+<span id="cb13-2"><a href="figures-and-margin-content.html#cb13-2"></a><span class="st">  </span><span class="kw">facet_grid</span>(<span class="op">~</span><span class="st"> </span>cut)</span></code></pre></div>
 </div>
 <div class="col-sm-9">
 <pre><code>## `geom_smooth()` using method = 'gam' and formula 'y ~ s(x, bs = "cs")'</code></pre>
@@ -285,7 +288,7 @@ A full width figure.
 <div class="row"><div class="col-sm-9"><p>Besides margin and full width figures, you can of course also include figures constrained to the main column. This is the default type of figures in the LaTeX/HTML output.</p></div></div>
 <div class="row test">
 <div class="col-sm-9">
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="kw">ggplot</span>(diamonds, <span class="kw">aes</span>(cut, price)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="figures-and-margin-content.html#cb15-1"></a><span class="kw">ggplot</span>(diamonds, <span class="kw">aes</span>(cut, price)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</span></code></pre></div>
 </div>
 <div class="col-sm-9">
 <p><img src="_main_files/figure-html/fig-main-1.png" alt="A figure in the main column." width="672"></p>
@@ -304,10 +307,10 @@ A figure in the main column.
 <div class="col-xs-12">
 <p style="text-align: center;">
 <a href="questions-and-solutions.html"><button class="btn btn-default">Previous</button></a>
-<a href="references.html"><button class="btn btn-default">Next</button></a>
+<a href="other-additions.html"><button class="btn btn-default">Next</button></a>
 </p>
 <p class="build-date">Page built: 
-2020-05-02
+2020-06-28
 </p>
 </div>
 </div>
