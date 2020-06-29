@@ -29,7 +29,7 @@ Documentation can be found at [https://aj2duncan.github.io/msmbstyle](https://aj
 
 ### Updated Project
 
-The updates of the package were funded through ESIF.
+The updates of the package were funded through ESF.
 
 ![](images/small-UHI_Logo.png)
 ![](images/small-ESF_logo2.png)
